@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> INVESTO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    {% include "navbar.html" %}
+    
+    <img  src="/static/img1.jpg" style="width:100%;height:360px;object-fit:cover;">
+    <!------------------ About---------------------------->
+    <h3 class="text-center mt-4">About</h3>
+    <div class="container text-center " style="font-size:20px;"><p>
+      INVESTO Inc is a group investment website that is based on the concept of 'Stokvel'- a community-based savings club in which money circulates within a group of people. The group consists of a 'reciever' and 'contributers'. The 'contributers' contribute the agreed amount which is then collectively given to the 'reciever'. The 'reciever' title then moves to the next rightful person in the group eventually rotating through each member. Usually there is a specified rotating pattern which can be weekly, monthly, annually or birth-day month. Now <b> INVESTO Inc</b> is here to offer a safe, controlled and efficient platform that will ensure that every transaction is executed at the specified date, every member in the group is cooperationg and that everything is fair.
+    </p></div>
+    <!------------------ Advantages of Company---------------------------->
+    <h3 class="text-center">Why INVESTO?</h3><br>
+    <div class="container row">
+      <div class="col-8" style="font-size:20px;">
+          <ul>
+              <li>Security - You know where your money is going.</li><br>
+              <li>Trust - It is easier to work with people you know.</li><br>
+              <li>Controlled System - We handle all the hardwork.</li><br>
+              <li>Time Efficiency - We keep track of the current and next 'Reciever'</li>
+          </ul>
+      </div>
+      <div class="col-4">
+        <img src="static/safe.jpg" style="width:50%;">
+      </div>
+    </div>
+    <!------------------ Members layout---------------------------->
+    <div class="conatiner text-center mt-4">
+      <h2 style="color:rgb(120,120,120);">Group A - Members</h2>
+      <div class="container row" style="color:rgb(100,100,100); font-size:18px;">
+         {%for m in Group%}
+          <div class="col-1">
+            {{m["id"]}}
+          </div>
+          <div class="col-3">
+            {{ m["_name"]}}
+          </div>
+          <div class="col-3">
+            {{ m["_surname"]}}
+          </div>
+          <div class="col-1">
+            {{ m["title"]}}
+          </div>
+        <div class="col-4">
+            {{ m["email"]}}
+          </div>
+        {%endfor%}
+      </div>
+    </div><br>
+
+    <!-------------------- End of Members layout--------------------->
+    <div class="text-center">
+      <h6> Want to be a member? Click below to register</h6>
+      <a href="/register"><button>register</button></a>
+    </div>
+    {% include "footer.html" %}
+  </body>
+</html>
+
+  
