@@ -7,7 +7,8 @@ def getMembers():
   host=os.environ['host'],
   user=os.environ['user'],
   password=os.environ['password'],
-    database=os.environ['database']
+    database=os.environ['database'],
+    ssl_ca   = "/etc/ssl/cert.pem"
   )
   mycursor = mydb.cursor()
   mycursor.execute("SELECT* FROM members;")
