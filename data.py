@@ -23,10 +23,10 @@ def getMembers():
 #send data to the database
 def sendApplicant(data):
   mydb = mysql.connector.connect(
-  host="aws.connect.psdb.cloud",
-  user="0ec1sfhogw2pc3v1vedh",
-  password="pscale_pw_c7Wxf2jBwdHYCCBHLNynPhPgjgrLEHNdTLFTEpUAstB",
-    database="investo_db"
+  host=os.environ['host'],
+  user=os.environ['user'],
+  password=os.environ['password'],
+    database=os.environ['database']
   )
   mycursor = mydb.cursor()
   mycursor.execute("INSERT INTO members(_name,_surname,title,email) VALUES(%s,%s,%s,%s);",(data["name"],data["surname"],"C",data["email"]));

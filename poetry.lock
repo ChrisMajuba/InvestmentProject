@@ -204,6 +204,14 @@ dns-srv = ["dnspython (>=1.16.0,<=2.3.0)"]
 gssapi = ["gssapi (>=1.6.9,<=1.8.2)"]
 
 [[package]]
+name = "mysqlclient"
+version = "2.2.0"
+description = "Python interface to MySQL"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
 name = "numpy"
 version = "1.24.1"
 description = "Fundamental package for array computing in Python"
@@ -270,6 +278,17 @@ description = "passive checker of Python programs"
 category = "dev"
 optional = false
 python-versions = ">=3.6"
+
+[[package]]
+name = "python-dotenv"
+version = "1.0.0"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+cli = ["click (>=5.0)"]
 
 [[package]]
 name = "python-lsp-jsonrpc"
@@ -475,7 +494,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "b6da576e9e6dd61defa3942d014b2910aa94f1211657cf501df1e6d29135ab27"
+content-hash = "a38aaf159147861ad9fb5af74521a40c75f6ec3679af03727124ebf73f7e8ff9"
 
 [metadata.files]
 aiohttp = []
@@ -496,6 +515,7 @@ jinja2 = []
 markupsafe = []
 multidict = []
 mysql-connector-python = []
+mysqlclient = []
 numpy = []
 packaging = []
 parso = []
@@ -503,6 +523,7 @@ platformdirs = []
 pluggy = []
 protobuf = []
 pyflakes = []
+python-dotenv = []
 python-lsp-jsonrpc = []
 pytoolconfig = []
 replit = []
