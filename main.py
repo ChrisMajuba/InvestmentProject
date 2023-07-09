@@ -13,7 +13,7 @@ def register():
 @app.route("/registration", methods=["post"])
 def info():
   d = request.form
-  #sendApplicant(d)
+  sendApplicant(d)
   return render_template("submit.html")
 if __name__ == "__main__":
   app.run(host="0.0.0.0",debug=True)
