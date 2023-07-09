@@ -1,13 +1,14 @@
 from sqlalchemy import create_engine,text
 import os
 
-#retrieve data from the database
-def getMembers():
-  db_connect_string = os.getenv("database_info")
-  engine = create_engine(db_connect_string,connect_args={
+db_connect_string = os.getenv("dataabse_info")
+engine = create_engine("mysql+pymysql://rbrt1bdj48z98cj3dwjv:pscale_pw_CDJbWWORq2NhJ1mHMY5NWEy2mNPXzzQ9kc1eeyrq3W5@aws.connect.psdb.cloud/investo_db?charset=utf8mb4",connect_args={
         "ssl" :{
     "ssl_ca": "/etc/ssl/cert.pem"}
     })
+
+#retrieve data from the database
+def getMembers():
   with engine.connect() as connection:
     result = connection.execute(text("SELECT *FROM members;"))
     members = []
@@ -17,11 +18,6 @@ def getMembers():
 
 #send data to the database
 def sendApplicant(data):
-  db_connect_string = os.getenv("database_info")
-  engine = create_engine(db_connect_string,connect_args={
-        "ssl" :{
-    "ssl_ca": "/etc/ssl/cert.pem"}
-    })
   with engine.connect() as conn:
     conn.execute(
         text("INSERT INTO members (_name, _surname,title,email) VALUES (:n,:s,:c,:e)"),[{"n": data["name"], "s": data["surname"],"c":"C","e":data["email"]}])
