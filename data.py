@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine,text
 import os
 
-db_connect_string = os.getenv("dataabse_info")
-engine = create_engine("mysql+pymysql://rbrt1bdj48z98cj3dwjv:pscale_pw_CDJbWWORq2NhJ1mHMY5NWEy2mNPXzzQ9kc1eeyrq3W5@aws.connect.psdb.cloud/investo_db?charset=utf8mb4",connect_args={
+db_connect_string = os.getenv("database_info")
+engine = create_engine(db_connect_string,connect_args={
         "ssl" :{
     "ssl_ca": "/etc/ssl/cert.pem"}
     })
