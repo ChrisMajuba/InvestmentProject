@@ -10,29 +10,40 @@
   </head>
   <body>
     {% include "navbar.html" %}
-    
-    <img  src="/static/img1.jpg" style="width:100%;height:360px;object-fit:cover;">
-    <!------------------ About---------------------------->
-    <h3 class="text-center mt-4">About</h3>
-    <div class="container text-center " style="font-size:20px;"><p>
-      INVESTO Inc is a group investment website that is based on the concept of 'Stokvel'- a community-based savings club in which money circulates within a group of people. The group consists of a 'reciever' and 'contributers'. The 'contributers' contribute the agreed amount which is then collectively given to the 'reciever'. The 'reciever' title then moves to the next rightful person in the group eventually rotating through each member. Usually there is a specified rotating pattern which can be weekly, monthly, annually or birth-day month. Now <b> INVESTO Inc</b> is here to offer a safe, controlled and efficient platform that will ensure that every transaction is executed at the specified date, every member in the group is cooperationg and that everything is fair.
-    </p></div>
+    <!------------------------------ title ---------------------------------------->
+    <h4 class="text-center mb-4"style="font-size:50px;">Welcome To INVESTO</h4>
+    <div class="row">
+      <div class="col-4">
+        <img  src="/static/home.jpg" style="width:100%;height:590px;object-fit:cover;">
+      </div>
+      <div class="col-8 text-center p-5" >
+        <!------------------------------ About---------------------------------------->
+        <h3 class="mt-4">About</h3>
+        <div class="container" style="font-size:20px;"><p>
+          INVESTO Inc is a Group Investment Platform that is based on the concept of 'Stokvel'- a community-based savings club in which money circulates within a group of people. The group consists of a 'reciever' and 'contributers'. The 'contributers' contribute the agreed amount which is then collectively given to the 'reciever'. The 'reciever' title then moves to the next rightful person in the group eventually rotating through each member. Usually there is a specified rotating pattern which can be weekly, monthly, annually or birth-day month. Now <b> INVESTO Inc</b> is here to offer a safe, controlled and efficient platform that will ensure that every transaction is executed at the specified date, every member in the group is cooperationg and that everything is fair.
+        </p></div>
+      </div>
+    </div>
+   
     <!------------------ Advantages of Company---------------------------->
     <h3 class="text-center">Why INVESTO?</h3><br>
-    <div class="container row">
-      <div class="col-8" style="font-size:20px;">
+    <div class="container">
+      <div style="font-size:20px;">
           <ul>
-              <li>Security - You know where your money is going.</li><br>
-              <li>Trust - It is easier to work with people you know.</li><br>
-              <li>Controlled System - We handle all the hardwork.</li><br>
-              <li>Time Efficiency - We keep track of the current and next 'Reciever'</li>
+              <li>Protection of Sensitive Data - We shield sensitive data from unsanctioned access, aiding in maintaining the privacy and averting identity theft.</li>
+              <li>Enhanced Trust - We ensure that organizations build trust within members through our values and morals.</li>
+              <li>Controlled System - We handle all the hardwork.</li>
+              <li>Time Efficiency - We keep track every transaction processed and keep each member within an organisation updated.</li>
+              <li>Early Detection and Response - We can help organizations detect threats early and respond effectively, minimizing potential damage and disruption.</li>
+            <li>Enhanced Collaboration - Secure communication platforms and tools enable teams to collaborate effectively and share sensitive information without worrying about unauthorized access or data leaks. </li>
+            <li>Remote Work Security - As remote work becomes increasingly common, INVESTO ensures the secure access and use of organizational resources, maintaining productivity while reducing risks associated with remote work environments.</li>
           </ul>
-      </div>
-      <div class="col-4">
-        <img src="static/safe.jpg" style="width:50%;">
       </div>
     </div>
     <!------------------ Members layout---------------------------->
+    <div class="container mt-4">
+      <img  src="/static/give.jpg" style="width:100%;height:360px;object-fit:cover;">
+    </div>
     <div class="conatiner text-center mt-4">
       <h2 style="color:rgb(120,120,120);">Group A - Members</h2>
       <div class="container row" style="color:rgb(100,100,100); font-size:18px;">
@@ -57,10 +68,11 @@
     </div><br>
 
     <!-------------------- End of Members layout--------------------->
-    <div class="text-center">
+    <div class="text-center mb-4">
       <h6> Want to be a member? Click below to register</h6>
       <a href="/register"><button>register</button></a>
     </div>
+     
     {% include "footer.html" %}
   </body>
 </html>
