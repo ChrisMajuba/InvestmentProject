@@ -13,13 +13,13 @@
     <!------------------------------ title ---------------------------------------->
     <h4 class="text-center mb-4"style="font-size:50px;">Welcome To INVESTO</h4>
     <div class="row">
-      <div class="col-4">
-        <img  src="/static/home.jpg" style="width:100%;height:590px;object-fit:cover;">
+      <div class="col-md-4">
+        <img  class="d-none d-md-block d-xl-none" src="/static/home.jpg" style="width:100%;height:590px;object-fit:cover;">
       </div>
-      <div class="col-8 text-center p-5" >
+      <div class="col-md-8 text-center p-5" >
         <!------------------------------ About---------------------------------------->
         <h3 class="mt-4">About</h3>
-        <div class="container" style="font-size:20px;"><p>
+        <div class="container text-center" style="font-size:20px;"><p>
           INVESTO Inc is a Group Investment Platform that is based on the concept of 'Stokvel'- a community-based savings club in which money circulates within a group of people. The group consists of a 'reciever' and 'contributers'. The 'contributers' contribute the agreed amount which is then collectively given to the 'reciever'. The 'reciever' title then moves to the next rightful person in the group eventually rotating through each member. Usually there is a specified rotating pattern which can be weekly, monthly, annually or birth-day month. Now <b> INVESTO Inc</b> is here to offer a safe, controlled and efficient platform that will ensure that every transaction is executed at the specified date, every member in the group is cooperationg and that everything is fair. For more information on <a target="_blank" href="https://en.wikipedia.org/wiki/Stokvel">'Stokvel'</a>
         </p></div>
       </div>
@@ -45,22 +45,22 @@
       <img  src="/static/give.jpg" style="width:100%;height:360px;object-fit:cover;">
     </div>
     <div class="conatiner text-center mt-4">
-      <h2 style="color:rgb(120,120,120);">Group A - Members</h2>
+      <h2 style="color:rgb(120,120,120);">Group A - Applicants</h2>
       <div class="container row" style="color:rgb(100,100,100); font-size:18px;">
          {%for m in Group%}
-          <div class="col-1">
+          <div class="col-3 col-md-1">
             {{m["id"]}}
           </div>
-          <div class="col-3">
+          <div class="col-3 col-md-3">
             {{ m["_name"]}}
           </div>
-          <div class="col-3">
+          <div class="col-3 col-md-3">
             {{ m["_surname"]}}
           </div>
-          <div class="col-1">
+          <div class="col-3 col-md-1">
             {{ m["title"]}}
           </div>
-        <div class="col-4">
+        <div class="d-none d-sm-block col-md-4">
             {{ m["email"]}}
           </div>
         {%endfor%}
